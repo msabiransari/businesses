@@ -1,0 +1,38 @@
+[
+  {
+    "id": 100,
+    "name": "Accurate Roofing and Siding",
+    "street": "23 Main St",
+    "city": "Robbinsville",
+    "state": "NJ",
+    "zip": "08691",
+    "phone": "(609) 234-9232"
+  },
+  {
+    "id": 101,
+    "name": "Edinburg Animal Hospital",
+    "street": "55 West St",
+    "city": "Hamilton",
+    "state": "NJ",
+    "zip": "08690",
+    "phone": "(609) 634-9232"
+  },
+  {
+    "id": 102,
+    "name": "Princeton Tree Care",
+    "street": "3 Grace St",
+    "city": "Princeton",
+    "state": "NJ",
+    "zip": "08699",
+    "phone": "(608) 234-4232"
+  },
+  {
+    "id": 103,
+    "name": "Cooper Pest Solutions",
+    "street": "39 Yardville Rd",
+    "city": "Trenton",
+    "state": "NJ",
+    "zip": "08790",
+    "phone": "(602) 214-3332"
+  }
+]
