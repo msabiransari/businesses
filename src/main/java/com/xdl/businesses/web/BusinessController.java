@@ -19,9 +19,10 @@ public class BusinessController {
 
   public BusinessController() {
     try {
-      businesses = new ObjectMapper().readValue(new ClassPathResource("data.json").getPath(), new TypeReference<List<Business>>() {
+      businesses = new ObjectMapper().readValue(new ClassPathResource("/data.json").getInputStream(), new TypeReference<List<Business>>() {
       });
-    }catch(Exception e) {
+    } catch(Exception e) {
+      e.printStackTrace();
       businesses = new ArrayList<>();
     }
   }
