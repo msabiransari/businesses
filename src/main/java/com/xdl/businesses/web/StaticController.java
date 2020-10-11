@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-@CrossOrigin(origins = { "http://localhost:8080", "https://local-biz.herokuapp.com"})
+@CrossOrigin(origins = { "http://localhost:8080", "https://10xdl.groovepages.com"})
 @Controller
 public class StaticController {
 
