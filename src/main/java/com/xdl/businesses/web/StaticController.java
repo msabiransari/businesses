@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 @Controller
 public class StaticController {
 
-  @GetMapping("/app.json")
+  @GetMapping("/app.js")
   public String appJson() {
     StringBuilder builder = new StringBuilder();
 
