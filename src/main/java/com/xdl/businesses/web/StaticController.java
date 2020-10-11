@@ -5,28 +5,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 @CrossOrigin
 @Controller
 public class StaticController {
 
   @GetMapping("/app.json")
-  public void appJson(HttpServletResponse response) {
-    try {
-      InputStream source = new ClassPathResource("/static/app.js").getInputStream();
-      OutputStream target = response.getOutputStream();
-      byte[] buf = new byte[8192];
-      int length;
-      while ((length = source.read(buf)) > 0) {
-        target.write(buf, 0, length);
-      }
-      target.close();
-      source.close();
-    } catch(Exception e) {
+  public String appJson() {
+    StringBuilder builder = new StringBuilder();
+
+    try (Stream<String> stream = Files.lines(Paths.get(new ClassPathResource("/static/app.js").getPath()))) {
+      stream.forEach(builder::append);
+    } catch (Exception e) {
       e.printStackTrace();
     }
+    return builder.toString();
   }
 }
